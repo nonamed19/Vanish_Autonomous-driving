@@ -1,0 +1,901 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mapContainer {
+  width: 100%;
+  position: relative;
+}
+
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fcfcfc;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dragHandle {
+  width: 100px;
+  height: 5px;
+  background-color: #86868650;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: grab;
+  touch-action: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.panelContent {
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(
+    100% - 40px
+  ); /* Accounting for the desired 20px padding on each side */
+  height: calc(
+    100% - 40px
+  ); /* Accounting for the desired 20px padding on each side */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelHeader {
+  padding: 40px 15px 15px;
+  border-bottom: 1px solid #86868650;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panelHeaderText {
+  color: #012d5e;
+  font-weight: bold;
+  font-size: 16px;
+  width: 320px;
+}
+
+.panelBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 84px); /* 헤더 높이에 따라 조정 */
+}
+
+.panelBodyText {
+  text-align: center;
+}
+
+.menuButton {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* 부드러운 전환 효과 추가 */
+}
+
+.menuButton:hover {
+  background-color: #86868640; /* 호버 시 배경색 변경 */
+  transform: scale(1.05); /* 호버 시 약간 확대 */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* 호버 시 그림자 강화 */
+}
+
+.menuIconImage {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.backIconImage {
+  margin: 10px 136px 0 0;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.timeIconImage {
+  width: auto;
+  height: 90px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+.menuIconImage:hover,
+.backIconImage:hover {
+  opacity: 0.8; /* 호버 시 약간 투명도 조정 */
+}
+
+.backIconImage:hover {
+  transform: scale(1.05);
+}
+
+.menuIcon {
+  width: 20px;
+  height: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuIcon span {
+  display: block;
+  height: 3px;
+  width: 16px;
+  background-color: #012d5e;
+  border-radius: 2px;
+}
+
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000030;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menuOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 2. 프레임 사이즈 */
+
+.menuOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000030;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menuContainer {
+  display: block;
+  align-self: start;
+  width: 70%;
+  max-width: 260px;
+  background-color: #fcfcfc;
+  height: fit-content;
+  margin: 120px 0 0 -30px;
+  padding: 0 0 4px 40px;
+  border-radius: 10px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.menuOverlay.active .menuContainer {
+  transform: translateX(0);
+}
+
+.menuHeader {
+  color: #012d5e;
+  padding: 15px 12px 12px;
+}
+
+.menuItem {
+  padding: 12px 15px;
+  margin-top: 5px;
+}
+
+/* ----- */
+
+.menuHeaderText {
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+}
+
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* margin-top: 3px; */
+}
+
+.menuLink {
+  color: #868686;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menuText:hover,
+.menuLink:hover {
+  color: #012d5e;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.menuText {
+  color: #868686;
+  display: block;
+  font-size: 16px;
+}
+
+.VehicleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.readyContainer .moveButton {
+  margin: 20px auto 10px;
+  width: 150px;
+}
+
+.VehicleContainer .moveButton {
+  width: 150px;
+  margin: 5px 0 15px;
+}
+
+.VehicleImage {
+  width: 200px;
+  margin-bottom: 0px;
+}
+
+.VehicleText {
+  font-size: 22px;
+  font-weight: 700;
+  color: #012d5e;
+  text-align: center;
+}
+
+.callDetail {
+  margin-bottom: 10px;
+  width: 320px;
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+}
+
+.drivingText {
+  font-size: 16px;
+  font-weight: 500;
+  color: #012d5e;
+  margin: 80px 0 16px;
+}
+
+.settingContainer,
+.readyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin-top: 13px;
+  width: 90%;
+  height: 100%;
+}
+
+.readyContainer h1 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: -10px 0 20px;
+  color: #012d5e;
+  text-shadow: 0 0 3px #012d5e50;
+}
+
+.readyContainer h2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 0px 0 20px;
+}
+
+.settingContainer h2 {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 30px 0 20px;
+}
+
+.warningMessage {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-size: 14px;
+  margin: -6px 0 0 3px;
+}
+
+.reMessage {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin: 0 0 20px;
+  font-size: 14px;
+  color: #012d5e;
+}
+
+.bigMessage {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  font-size: 14px;
+  margin: 0;
+}
+
+.bigMessage p {
+  margin: 3px 0 0 3px;
+}
+
+.readyButtons .changeButton {
+  position: absolute;
+  bottom: 13px;
+  right: 0%;
+  transform: translateX(-13%);
+  z-index: 5;
+  padding: 8px 10px;
+  background-color: #012d5e;
+  color: #fcfcfc;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.readyButtons .changeButton:hover {
+  opacity: 80%;
+}
+
+.readyButtons .changeButton:active {
+  opacity: 100%;
+}
+
+.triggerButton {
+  width: 150px;
+  margin-bottom: 0;
+}
+
+.sortButtons {
+  display: flex;
+  margin: 20px auto;
+  height: 60px;
+  width: fit-content;
+  gap: 13px;
+}
+
+.sortButtons img {
+  display: flex;
+}
+
+.sortButtons span {
+  font-size: 16px;
+}
+
+.sortButtons .timeText {
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+.backButton {
+  width: 180px;
+  margin: auto;
+}
+
+.sortButtons button {
+  padding: 8px 12px;
+  border: 1px solid #012d5e40;
+  border-radius: 8px;
+  background: none;
+  color: #012d5e;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.activeSortButton {
+  outline: none;
+  transform: scale(1.02);
+  font-weight: 700;
+  box-shadow: 0px 0px 3px #012d5e80;
+  background-color: #3387bd05;
+}
+
+.sortButtons button:hover {
+  color: #012d5e90;
+  background-color: #fcfcfc60; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.sortButtons button:active {
+  transform: scale(0.95); /* 클릭 효과 */
+}
+
+/* 기본 버튼 형식 기반 */
+.retryButton {
+  box-shadow: 0px 0px 3px #012d5e60;
+  margin: 0 0 80px;
+}
+
+.moveButton {
+  color: #fcfcfc;
+  background-color: #012d5e;
+  font-size: 16px;
+  
+}
+
+.callButton {
+  font-size: 16px;
+  color: #fcfcfc;
+  background-color: #012d5e;
+}
+
+.readyContainer .warningMessage {
+  margin-bottom: 20px;
+}
+
+.cardList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cardList h3 {
+  font-size: 16px;
+  color: #012d5e;
+  margin: 0px 0 20px;
+}
+
+.parkingCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: #fcfcfc;
+  width: fit-content; /* 카드 너비 고정 */
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 0px 5px #012d5e40;
+  cursor: pointer;
+}
+
+.retryButton:hover,
+.moveButton:hover {
+  transform: scale(1.01);
+}
+
+.retryButton:active,
+.moveButton:active {
+  transform: scale(0.95);
+}
+
+/* 주차장 카드 콘텐츠 */
+.parkingCardContent {
+  display: flex;
+  flex-direction: row; /* 수평 배치 */
+  align-items: center; /* 상하 기준 중앙 정렬 */
+  justify-content: center; /* 좌우 기준 중앙 정렬 */
+}
+
+/* 항목 텍스트 스타일 */
+.infoSection h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #012d5e;
+  margin-bottom: 13px;
+}
+
+/* 고객 정보 항목 */
+.infoSection {
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.infoDetail {
+  margin-bottom: 10px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+}
+
+.infoDetail:last-child {
+  margin-bottom: 0;
+}
+
+.infoValue {
+  font-family: "Hyundai Sans", sans-serif; /* 입력 필드와 통일된 폰트 */
+  color: #012d5e; /* 주요 브랜드 컬러 적용 */
+  font-weight: 500; /* 가독성 향상을 위한 중간 굵기 */
+  text-align: right; /* 값을 오른쪽 정렬 */
+  flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+}
+
+/* 최소 크기 상태에서 본문 숨김 */
+.panel.minimized .panelBody {
+  display: none; /* 본문 콘텐츠를 숨김 */
+}
+
+/* 오버레이 스타일 */
+.modalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 프레임 전체 너비 */
+  height: 100%; /* 프레임 전체 높이 */
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  z-index: 1000; /* 다른 요소 위에 표시 */
+}
+
+/* 모달 창 스타일 */
+.modal {
+  background-color: #fcfcfc; /* 흰색 배경 */
+  border-radius: 12px; /* 둥근 모서리 */
+  width: 80%; /* 화면 크기에 따라 너비 조정 */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* 그림자 효과 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.modal h3 {
+  color: #012d5e;
+  margin: 24px 0 20px;
+}
+
+.modal h2 {
+  color: #012d5e;
+  margin: 13px 0;
+}
+
+.imageSucceed {
+  margin: 20px 0 4px;
+  height: 40px;
+}
+
+.modalCloseButton {
+  width: 60px;
+  padding: 5px;
+  margin: 0px 0px 20px;
+  font-size: 16px;
+  background-color: #fcfcfc;
+  color: #012d5e;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+}
+
+.modalCloseButton:hover {
+  color: #012d5e60;
+  background-color: #86868620; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.modalCloseButton:active {
+  transform: scale(0.95); /* 클릭 효과 */
+}
+
+.textWarning {
+  color: #000000;
+}
+
+.textHighlightBad {
+  color: #e63312;
+  font-weight: 700;
+}
+
+.textHighlightGood {
+  color: #4a7542;
+  font-weight: 700;
+}
+
+.textHighlightLoop {
+  color: #012d5e;
+  font-weight: 500;
+  margin: 0 3px;
+}
+
+.textDetail {
+  font-size: 14px;
+  color: #868686;
+  margin: 20px 0 0;
+}
+
+/* 모달 버튼 스타일 */
+.modalButtons {
+  display: flex;
+  justify-content: center; /* 버튼을 중앙에 배치 */
+  gap: 12px; /* 버튼 간 간격 */
+  margin: 16px 0 24px;
+}
+
+/* 모달 버튼 스타일 */
+.modalButtons button {
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.modalButtons button:hover {
+  transform: scale(1.02);
+}
+
+.modalParkingImage {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.toggleButton {
+  background-color: #9bd9e2;
+}
+
+.mapModal {
+  position: relative;
+  background: white;
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mapModalContainer {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.modalButtons {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* --------------Tablet Mode----------------- */
+
+/* 태블릿 모드 전용 스타일 */
+.container.tabletMode {
+  display: flex;
+  flex-direction: row; /* 가로 배치 */
+  align-items: stretch;
+  height: calc(100% - 120px); /* 상단 바(60px) + 하단 바(60px) 제외한 높이 */
+  padding-top: 60px; /* 상단 바 공간 */
+  padding-bottom: 60px; /* 하단 바 공간 */
+}
+
+/* 맵 컨테이너 */
+.container.tabletMode .mapContainer {
+  width: 60%;
+  height: 100% !important; /* 높이 고정 */
+  order: 1; /* 맵을 왼쪽으로 이동 */
+}
+
+/* 패널 컨테이너 */
+.container.tabletMode .panel {
+  position: relative;
+  width: 40%;
+  height: 100% !important;
+  border-radius: 0;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  order: 2; /* 패널을 오른쪽으로 이동 */
+  z-index: 2;
+}
+
+.container.tabletMode .backIconImage {
+  margin-left: -160px;
+  width: 40px;
+  height: auto;
+}
+
+.container.tabletMode .VehicleContainer img {
+  margin: auto;
+}
+
+.container.tabletMode .readyContainer .backIconImage {
+  margin: -20px 0 40px 20px;
+  width: 40px;
+  height: auto;
+}
+
+.container.tabletMode .readyContainer span {
+  margin-top: 0px;
+  font-size: 16px;
+}
+
+.container.tabletMode .settingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 150px;
+}
+
+/* 드래그 핸들 제거 */
+.container.tabletMode .dragHandle {
+  display: none;
+}
+
+/* 패널 콘텐츠 재정렬 */
+.container.tabletMode .panelContent {
+  position: static;
+  transform: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.container.tabletMode .menuOverlay {
+  z-index: 3000;
+}
+
+/* 메뉴 버튼 위치 조정 */
+.container.tabletMode .menuButton {
+  top: 10px;
+  left: 20px;
+  z-index: 2000;
+}
+
+.container.tabletMode .menuContainer {
+  margin-top: 0;
+  padding-bottom: 280px;
+}
+
+.container.tabletMode .modal {
+  width: 400px;
+}
+
+/* 태블릿 전용 헤더 스타일 */
+.container.tabletMode .panelHeader {
+  border-bottom: none;
+  padding: 20px;
+}
+
+/* 태블릿 전용 헤더 스타일 */
+.container.tabletMode .panelHeaderText {
+  border-bottom: none;
+  margin-top: 10%;
+  padding: 20px;
+}
+
+.container.tabletMode .VehicleContainer {
+  margin-top: -40px;
+}
+
+.container.tabletMode .backButton {
+  margin: 0 auto 50px;
+}
+
+.container.tabletMode .toggleButton {
+  margin-bottom: 60px;
+}
+
+.container.tabletMode .timeIconImage {
+  margin-top: 0px;
+}
+
+.container.tabletMode .panelHeaderText {
+  font-size: 16px;
+}
+
+.container.tabletMode .sortButtons {
+  margin: 40px auto;
+}
+
+/* 차량 이미지 크기 조정 */
+.container.tabletMode .VehicleImage {
+  width: 360px;
+  margin: 0 40px 20px 0;
+}
+
+/* 운전 중 아이콘 그리드 */
+.container.tabletMode .drivingIcons {
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.container.tabletMode .iconButton {
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  justify-content: flex-start;
+}
+
+.container.tabletMode .iconButton span {
+  margin-top: 0;
+  margin-left: 15px;
+}
+
+/* 상단 바 스타일 */
+.tabletTopBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px; /* 이미지 높이와 동일하게 설정 */
+  background-color: transparent; /* 배경색 제거 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.topBarImage {
+  height: 100%; /* 상단 바 전체 높이에 맞춤 */
+  width: auto; /* 이미지 비율 유지 */
+}
+
+/* 하단 바 스타일 */
+.tabletBottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* 이미지 높이와 동일하게 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  background-color: #fcfcfc;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottomBarImage {
+  height: auto; /* 하단 바 전체 높이에 맞춤 */
+  width: 100%; /* 이미지 비율 유지 */
+}

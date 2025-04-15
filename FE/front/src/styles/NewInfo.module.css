@@ -1,0 +1,156 @@
+.NewInfoContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: auto;
+  background-color: #fcfcfc;
+  padding: 0px;
+}
+
+.LogoContainer {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.HyundaiLogo {
+  max-width: 120px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.Title {
+  align-self: start;
+  font-size: 16px;
+  color: #012d5e;
+  margin: 0 0 30px 20px;
+}
+
+.InputContainer {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+/* 입력 필드 스타일 (회원 탈퇴 컴포넌트와 동일하게 수정) */
+.Input {
+  width: 93%;
+  padding: 12px;
+  border-radius: 4px; /* 둥근 모서리 */
+  border: solid 1px #012d5e40; /* 테두리 색상 */
+  font-size: 14px; /* 폰트 크기 */
+  margin-bottom: 20px;
+}
+
+/* 레이블 스타일 */
+.PreviewContainer label,
+.InputContainer label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #012d5e;
+  text-align: left; /* 좌측 정렬 */
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  transform: scale(1.02);
+  border: 2px solid #012D5E;
+  box-shadow: 0px 0px 5px #012d5e80; /* 그림자 효과 */
+}
+
+.InputError {
+  border: 2px solid #e63312; /* 빨간 테두리 */
+  box-shadow: 0px 0px 5px #e63312; /* 강조 효과 */
+}
+
+.VerifyButton {
+  width: 100%;
+  padding: 12px 0 10px;
+  margin: 0;
+  background-color: #fcfcfc;
+  color: #012d5e;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 0px 5px #012d5e70;
+}
+
+.VerifyButton:hover {
+  color: #012d5e90;
+  background-color: #86868630; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.ErrorText {
+  color: #e63312;
+  font-size: 14px;
+  margin-top: 20px;
+  position: relative; /* 요소를 절대 위치로 설정 */
+  text-align: center; /* 텍스트를 중앙 정렬 */
+}
+
+.PreviewContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.PreviewImage {
+  width: 200px;
+  margin: 36px 0 0;
+}
+
+.VehicleName {
+  color: #012d5e;
+  font-size: 16px;
+  margin: 5px 0 -3px;
+}
+
+.OwnershipOptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 16px 36px;
+}
+
+.OwnershipButton {
+  padding: 8px 12px;
+  border: 1px solid #012d5e40;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.SelectedButton {
+  background-color: #012d5e10;
+  color: #012d5e;
+  font-weight: 700;
+  box-shadow: 0px 0px 3px #012d5e;
+}
+
+.RegisterButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #012d5e;
+  color: #fcfcfc;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 4px;
+  box-shadow: 0px 0px 5px #012d5e40; /* 그림자 효과 */
+}
+
+.RegisterButton:hover {
+  color: #fcfcfc60;
+  background-color: #012d5e90; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.RegisterButton:active {
+  transform: scale(0.95); /* 클릭 효과 */
+}

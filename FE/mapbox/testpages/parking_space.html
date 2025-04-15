@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Area Visualization</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #map { width: 100vw; height: 100vh; }
+        #file-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="file-input">
+        <input type="file" id="parkingFile" accept=".json">
+        <button onclick="loadParkingData()">Load Parking Data</button>
+        <button onclick="saveGeoJSON()">Save GeoJSON</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm14MWFtIiwiYSI6ImNtNjVzeXExYTBzNjMycnF2ZWw5eG4yZGgifQ.yWwzK20xQIi0JPRXoUyW-Q';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [126.56303510561335, 37.52512192846917],
+            zoom: 20
+        });
+
+        let parkingFeatures = [];
+
+        function loadParkingData() {
+            const parkingFile = document.getElementById('parkingFile').files[0];
+            if (!parkingFile) {
+                alert('Please select a parking area JSON file.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const data = JSON.parse(event.target.result);
+                parseParkingData(data);
+            };
+            reader.readAsText(parkingFile);
+        }
+
+        function parseParkingData(data) {
+            parkingFeatures = data.map(parking => ({
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [parking.points.map(point => [point[0], point[1]])]
+                },
+                properties: {
+                    idx: parking.idx,
+                    parking_type: parking.parking_type,
+                    parking_target_type: parking.parking_target_type,
+                    parking_direction: parking.parking_direction,
+                    distance: parking.distance,
+                    width: parking.width,
+                    length: parking.length,
+                    angle: parking.angle
+                }
+            }));
+
+            if (map.getSource('parking-areas')) {
+                map.getSource('parking-areas').setData({
+                    type: 'FeatureCollection',
+                    features: parkingFeatures
+                });
+            } else {
+                map.addSource('parking-areas', {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: parkingFeatures
+                    }
+                });
+
+                map.addLayer({
+                    id: 'parking-layer',
+                    type: 'fill',
+                    source: 'parking-areas',
+                    paint: {
+                        'fill-color': '#088',
+                        'fill-opacity': 0.5
+                    }
+                });
+
+                map.addLayer({
+                    id: 'parking-outline',
+                    type: 'line',
+                    source: 'parking-areas',
+                    paint: {
+                        'line-color': '#000',
+                        'line-width': 2
+                    }
+                });
+            }
+        }
+
+        function saveGeoJSON() {
+            if (parkingFeatures.length === 0) {
+                alert('No parking data available to save.');
+                return;
+            }
+
+            const geojson = {
+                type: 'FeatureCollection',
+                features: parkingFeatures
+            };
+
+            const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'parking_areas.geojson';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>

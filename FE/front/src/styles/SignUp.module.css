@@ -1,0 +1,367 @@
+body {
+  background-color: #fcfcfc; /* 흰색 배경 */
+  color: #012d5e; /* 기본 텍스트 색상 */
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-self: start;
+  margin-bottom: 30px;
+  color: #012d5e;
+}
+
+.signupContainer {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.logoContainer {
+  height: fit-content;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HyundaiLogo {
+  max-width: 120px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.pwInputGroupLast {
+  margin-bottom: 0px;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.vcInputGroup {
+  margin-bottom: 16px;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.pwInputGroup {
+  margin-bottom: 16px;
+  width: 80%;
+  margin: auto;
+}
+
+.pwInputGroupLast label,
+.pwInputGroup label {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.pwInputGroup input {
+  font-family: "Hyundai Sans";
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  width: 93%;
+}
+
+.pwInputGroupLast input {
+  font-family: "Hyundai Sans";
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+  border-radius: 4px;
+  width: 93%;
+}
+
+.vcInputGroup input {
+  font-family: "Hyundai Sans";
+  width: 93%;
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+  border-radius: 4px;
+}
+
+.smInputSetName,
+.smInputSetDate {
+  display: flex;
+  justify-content: space-between; /* 요소 간격 균등 배분 */
+}
+
+.smInputSetName input {
+  flex: 1; /* 각 입력 칸이 동일한 비율로 공간 차지 */
+  margin-right: 8px; /* 입력 칸 간격 설정 */
+  font-family: "Hyundai Sans";
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+  border-radius: 4px;
+  max-width: 42%;
+  /* max-width: 48%; */
+}
+
+.smInputSetDate input {
+  flex: 1; /* 각 입력 칸이 동일한 비율로 공간 차지 */
+  margin-right: 8px; /* 입력 칸 간격 설정 */
+  font-family: "Hyundai Sans";
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+  border-radius: 4px;
+  max-width: 25%; 
+  /* max-width: 31%; */
+}
+
+.smInputGroup input {
+  width: auto;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.smInputSetName input:last-child,
+.smInputSetDate input:last-child {
+  margin-right: 0; /* 마지막 입력 칸의 오른쪽 여백 제거 */
+}
+
+.smInputGroup {
+  margin-bottom: 16px;
+  width: 80%;
+  margin: auto;
+}
+
+.smInputGroup label {
+  margin: 0 0 10px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.errorInput {
+  border: 1px solid #e63312;
+}
+
+/* 타이머 스타일 */
+.timer {
+  font-family: "Hyundai Sans";
+  font-size: 14px;
+  color: #012d5e;
+  margin: 20px 0 10px;
+}
+
+/* 버튼 스타일 */
+.confirmButton {
+  width: 100%;
+  padding: 8px 8px 6px 8px;
+  margin: 13px 0 13px 0;
+  background-color: #fcfcfc;
+  color: #012d5e;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+}
+
+.sendButton {
+  width: 100%;
+  padding: 10px;
+  margin: 13px 0 40px 0;
+  background-color: #012d5e;
+  color: #fcfcfc;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #012d5e70;
+}
+
+.completeButton {
+  width: 80%;
+  padding: 10px;
+  margin: 40px 0;
+  background-color: #012d5e;
+  color: #fcfcfc;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #012d5e70;
+}
+
+.completeButtonLast {
+  width: 80%;
+  padding: 10px;
+  /* margin: 0; */
+  margin-top: 40px;
+  background-color: #012d5e;
+  color: #fcfcfc;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #012d5e70;
+}
+
+.sendButton.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.confirmButton:hover,
+.completeButtonLast:hover {
+  color: #012d5e90;
+  background-color: #86868630; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.completeButtonLast:hover,
+.completeButton:hover,
+.sendButton:hover {
+  color: #fcfcfc60;
+  background-color: #012d5e90; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.completeButtonLast:active,
+.completeButton:active,
+.confirmButton:active,
+.sendButton:active {
+  transform: scale(0.95); /* 클릭 효과 */
+}
+
+/* 비밀번호 유효성 검사 스타일 */
+.passwordValidation {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.passwordValidation li {
+  font-size: 14px;
+}
+
+.pwInputGroup:last-child {
+  margin-bottom: 0;
+}
+
+.passcodeToggleIcon {
+  position: absolute; /* 절대 위치로 설정 */
+  top: 5%; /* 수직 중앙 정렬 */
+  right: 13px; /* 오른쪽에 배치 */
+  width: 20px; /* 아이콘 크기 */
+  height: auto;
+  opacity: 0.36;
+  cursor: pointer; /* 클릭 가능하도록 설정 */
+}
+
+.passwordToggleIcon {
+  position: absolute;
+  top: 48%;
+  right: 10px; /* 간격 조정 */
+  transform: translateY(-50%); /* 정확한 중앙 배치 */
+  z-index: 2; /* 다른 요소 위에 표시 */
+  right: 13px; /* 오른쪽에 배치 */
+  width: 20px; /* 아이콘 크기 */
+  height: auto;
+  opacity: 0.36;
+  cursor: pointer; /* 클릭 가능하도록 설정 */
+}
+
+.passwordToggleIcon:hover,
+.passcodeToggleIcon:hover {
+  opacity: 0.7;
+}
+
+/* 성공 메시지 */
+.successMessage {
+  color: #012d5e;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+/* 에러 메시지 */
+.errorMessage {
+  color: #e63312;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+
+/* 특정 에러 메시지 스타일 */
+.specificErrorMessage {
+  margin-top: 13px; /* 특정 텍스트에만 적용 */
+}
+
+.errorMessageLast {
+  /* margin-top: 0; */
+  margin-top: 16px;
+  color: #e63312;
+  font-size: 14px;
+}
+
+/* 비활성화된 입력 필드 스타일 */
+.disabledInput {
+  color: #868686; /* 텍스트 색상 */
+  background-color: #86868630; /* 배경 색상 */
+}
+
+/* 모달 오버레이 및 창 */
+.suModalOverlay {
+  position: absolute;
+  top: 0px;
+  left: center;
+  width: 100%;
+  height: 100%;
+  background-color: #86868640;
+}
+
+.modalContent {
+  position: relative;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 18%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px #00000025;
+  background-color: #fcfcfc;
+}
+
+.modalContent img {
+  margin-top: 16px;
+  margin-bottom: 4px;
+  height: 24%;
+}
+
+.modalCloseButton {
+  width: 24%;
+  padding: 5px;
+  margin-top: 13px;
+  background-color: #fcfcfc;
+  color: #012d5e;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 3px #686868;
+}
+
+.modalCloseButton:hover {
+  color: #012d5e60;
+  background-color: #86868620; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+.modalCloseButton:active {
+  transform: scale(0.95); /* 클릭 효과 */
+}
+
+/* copyright 텍스트 스타일 */
+.copyrightText {
+  position: fixed;
+  margin: auto;
+  margin-left: 84px;
+  top: 740px;
+  font-size: 12px;
+}

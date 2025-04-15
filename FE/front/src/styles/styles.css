@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Hyundai Sans';
+  src: url('../fonts/HyundaiSansTextOffice-Bold.ttf') format('truetype'),
+       url('../fonts/HyundaiSansTextOffice-Medium.ttf') format('truetype'),
+       url('../fonts/HyundaiSansTextOffice-Regular.ttf') format('truetype');
+  font-style: normal;
+  color: #012d5e;
+}
+
+body {
+  font-family: 'Hyundai Sans', Arial, sans-serif;
+}

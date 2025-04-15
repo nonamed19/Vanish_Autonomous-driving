@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTM to GPS Nodes & Links</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #map { width: 100vw; height: 100vh; }
+        #file-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="file-input">
+        <input type="file" id="nodeFile" accept=".json">
+        <input type="file" id="linkFile" accept=".json">
+        <button onclick="loadData()">Load Data</button>
+        <button onclick="saveGeoJSON()">GeoJSON 저장</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        // Mapbox 설정
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm14MWFtIiwiYSI6ImNtNjVzeXExYTBzNjMycnF2ZWw5eG4yZGgifQ.yWwzK20xQIi0JPRXoUyW-Q'; // 🚨 API 토큰 입력 필요
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [124.5111, 0.0169],
+            zoom: 20
+        });
+
+        function saveGeoJSON() {
+            const source = map.getSource("road-links");
+            if (!source) {
+                alert("도로 데이터가 없습니다!");
+                return;
+            }
+
+            const geojsonData = source.serialize().data;
+            if (!geojsonData) {
+                alert("데이터가 없습니다!");
+                return;
+            }
+
+            const blob = new Blob([JSON.stringify(geojsonData, null, 2)], { type: "application/json" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "road_network.geojson";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        function loadFile(fileInput, callback) {
+            const file = fileInput.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                callback(JSON.parse(event.target.result));
+            };
+            reader.readAsText(file);
+        }
+
+        function loadData() {
+            const nodeInput = document.getElementById('nodeFile');
+            const linkInput = document.getElementById('linkFile');
+
+            if (!nodeInput.files.length || !linkInput.files.length) {
+                alert("노드 및 링크 JSON 파일을 모두 선택해주세요.");
+                return;
+            }
+
+            loadFile(nodeInput, parseNodes);
+            loadFile(linkInput, parseLinks);
+        }
+
+        function parseNodes(data) {
+            const nodeMap = {};
+            data.forEach(node => {
+                let { idx, point } = node;  // ✅ 이미 변환된 WGS84 좌표 사용
+                nodeMap[idx] = point;
+            });
+            window.nodeMap = nodeMap;
+        }
+        
+        function parseLinks(data) {
+            if (!window.nodeMap) {
+                alert("노드 데이터를 먼저 로드해주세요.");
+                return;
+            }
+
+            const roadFeatures = data.map(link => ({
+                type: "Feature",
+                geometry: {
+                    type: "LineString",
+                    coordinates: link.points
+                }
+            }));
+
+            if (map.getSource("road-links")) {
+                map.getSource("road-links").setData({
+                    type: "FeatureCollection",
+                    features: roadFeatures
+                });
+                return;
+            }
+
+            map.addSource("road-links", {
+                type: "geojson",
+                data: {
+                    type: "FeatureCollection",
+                    features: roadFeatures
+                }
+            });
+
+            map.addLayer({
+                id: "road-layer",
+                type: "line",
+                source: "road-links",
+                layout: { "line-join": "round", "line-cap": "round" },
+                paint: { "line-color": "#000", "line-width": 2 }
+            });
+        }
+    </script>
+</body>
+</html>

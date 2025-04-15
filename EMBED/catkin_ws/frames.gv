@@ -1,0 +1,14 @@
+digraph G {
+"map" -> "base_link"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 41.357 Hz\nMost recent transform: 1743142940.003 ( 31679.906 sec old)\nBuffer length: 4.981 sec\n"];
+"base_link" -> "Camera"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 41.357 Hz\nMost recent transform: 1743142940.003 ( 31679.906 sec old)\nBuffer length: 4.981 sec\n"];
+"base_link" -> "gps"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 41.357 Hz\nMost recent transform: 1743142940.003 ( 31679.906 sec old)\nBuffer length: 4.981 sec\n"];
+"base_link" -> "imu"[label="Broadcaster: /rosbridge_websocket\nAverage rate: 41.357 Hz\nMost recent transform: 1743142940.003 ( 31679.906 sec old)\nBuffer length: 4.981 sec\n"];
+"map" -> "odom"[label="Broadcaster: /tf\nAverage rate: 30.334 Hz\nMost recent transform: 1743174619.865 ( 0.044 sec old)\nBuffer length: 4.912 sec\n"];
+"Ego" -> "velodyne_points"[label="Broadcaster: /tf_velodyne_points\nAverage rate: 10.187 Hz\nMost recent transform: 1743174619.970 ( -0.061 sec old)\nBuffer length: 4.908 sec\n"];
+"base_link" -> "Ego"[label="Broadcaster: /static_base_to_ego\nAverage rate: 10.187 Hz\nMost recent transform: 1743174620.000 ( -0.091 sec old)\nBuffer length: 4.908 sec\n"];
+"Ego" -> "velodyne"[label="Broadcaster: /tf_lidar\nAverage rate: 10.189 Hz\nMost recent transform: 1743174619.970 ( -0.061 sec old)\nBuffer length: 4.907 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1743174619.909"[ shape=plaintext ] ;
+ }->"map";
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surface Marking Visualization</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #map { width: 100vw; height: 100vh; }
+        #file-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="file-input">
+        <input type="file" id="surfaceMarkingFile" accept=".json">
+        <button onclick="loadSurfaceMarkingFile()">Load Surface Marking File</button>
+        <button onclick="saveGeoJSON()">Save GeoJSON</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm14MWFtIiwiYSI6ImNtNjVzeXExYTBzNjMycnF2ZWw5eG4yZGgifQ.yWwzK20xQIi0JPRXoUyW-Q';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [126.56477049416975, 37.52440081005209],
+            zoom: 20
+        });
+
+        let surfaceMarkingFeatures = [];
+
+        function loadSurfaceMarkingFile() {
+            const file = document.getElementById('surfaceMarkingFile').files[0];
+            if (!file) {
+                alert('Please select a Surface Marking JSON file.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const data = JSON.parse(event.target.result);
+                parseSurfaceMarkingData(data);
+            };
+            reader.readAsText(file);
+        }
+
+        function parseSurfaceMarkingData(data) {
+            surfaceMarkingFeatures = data.map(marking => ({
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [marking.points.map(point => [point[0], point[1]])]
+                },
+                properties: {
+                    idx: marking.idx,
+                    type: marking.type,
+                    sub_type: marking.sub_type,
+                    road_id: marking.road_id,
+                    link_id_list: marking.link_id_list
+                }
+            }));
+
+            updateMapSource('surface-markings', surfaceMarkingFeatures, 'fill', '#FFD700');
+        }
+
+        function updateMapSource(sourceId, features, layerType, color) {
+            if (map.getSource(sourceId)) {
+                map.getSource(sourceId).setData({
+                    type: 'FeatureCollection',
+                    features: features
+                });
+            } else {
+                map.addSource(sourceId, {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: features
+                    }
+                });
+
+                map.addLayer({
+                    id: `${sourceId}-layer`,
+                    type: layerType,
+                    source: sourceId,
+                    paint: {
+                        'fill-color': color,
+                        'fill-opacity': 0.6
+                    }
+                });
+
+                map.addLayer({
+                    id: `${sourceId}-outline`,
+                    type: 'line',
+                    source: sourceId,
+                    paint: {
+                        'line-color': '#000',
+                        'line-width': 2
+                    }
+                });
+            }
+        }
+
+        function saveGeoJSON() {
+            if (surfaceMarkingFeatures.length === 0) {
+                alert('No surface marking data available to save.');
+                return;
+            }
+
+            const geojson = {
+                type: 'FeatureCollection',
+                features: surfaceMarkingFeatures
+            };
+
+            const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'surface_markings.geojson';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>

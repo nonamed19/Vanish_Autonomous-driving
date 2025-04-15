@@ -1,0 +1,123 @@
+.resultContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 검은 배경 */
+  padding: 30px 20px;
+}
+
+.resultCard {
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  padding: 40px;
+  max-width: 500px;
+  width: 70%;
+  text-align: center;
+  background-color: #fcfcfc; /* 흰색 배경 */
+}
+
+.successCase,
+.failureCase {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+}
+
+.statusIcon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0px;
+}
+
+.resultMessage {
+  color: #012d5e;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.homeButton {
+  padding: 8px 12px;
+  box-shadow: 0px 0px 5px #012d5e60;
+  border-radius: 8px;
+  background: #012d5e;
+  color: #fcfcfc;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+}
+
+.homeButton:hover {
+  color: #fcfcfc60;
+  background-color: #012d5e90; /* 호버 효과 */
+  transform: scale(1.01);
+}
+
+
+/* --------------Tablet Mode----------------- */
+
+.container.tabletMode {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.container.tabletMode h2,
+.container.tabletMode .resultCard {
+  margin: auto;
+  margin-bottom: 320px;
+}
+
+.container.tabletMode .resultCard img {
+  margin-bottom: 10px;
+}
+
+.container.tabletMode .resultMessage {
+  margin-bottom: 30px;
+}
+
+.container.tabletMode .buttonContainer {
+  margin: auto;
+}
+
+/* 상단 바 스타일 */
+.tabletTopBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px; /* 이미지 높이와 동일하게 설정 */
+  background-color: transparent; /* 배경색 제거 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcfcfc;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.topBarImage {
+  height: 100%; /* 상단 바 전체 높이에 맞춤 */
+  width: auto; /* 이미지 비율 유지 */
+}
+
+/* 하단 바 스타일 */
+.tabletBottomBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* 이미지 높이와 동일하게 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  background-color: #fcfcfc;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bottomBarImage {
+  height: auto; /* 하단 바 전체 높이에 맞춤 */
+  width: 100%; /* 이미지 비율 유지 */
+}

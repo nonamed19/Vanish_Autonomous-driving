@@ -1,0 +1,100 @@
+/* mapbox 기본 컨트롤 숨김 */
+.mapboxgl-ctrl-attrib-button {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+  margin: 0 0 10px 10px;
+}
+
+.mapboxgl-ctrl-logo {
+  display: block !important;
+  position: relative !important;
+  margin: 0 !important;
+}
+
+/* 전체 컴포넌트 wrapper */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 지도 container */
+.mapContainer {
+  width: 100%;
+  transition: height 0.3s ease-out;
+}
+
+/* 패널 스타일 */
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease-out;
+  overflow: hidden;
+}
+
+/* 드래그 핸들 */
+.dragHandle {
+  width: 50px;
+  height: 5px;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin: 10px auto;
+  cursor: grab;
+  touch-action: none;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+/* 패널 내용 */
+.panelContent {
+  padding: 20px;
+}
+
+/* 버튼 스타일 */
+.buttonStart {
+  padding: 8px 16px;
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonStop {
+  padding: 8px 16px;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buttonDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 진행 바 */
+.progressBar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.progressFill {
+  height: 10px;
+  background-color: #4264fb;
+  border-radius: 4px;
+}

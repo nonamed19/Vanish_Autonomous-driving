@@ -1,0 +1,62 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+.gradle/
+
+# 로그 파일 및 로그 디렉토리
+*.log
+logs/
+
+# 환경 변수 파일
+.env
+.env.local
+
+# Ignore YAML files
+application.yml
+application-local.yml
+application-prod.yml
+application.yaml
+application-local.yaml
+application-prod.yaml
+
+# Docker 관련 파일 (컨테이너 빌드 결과물이나 로컬 오버라이드 파일)
+docker-compose.override.yml
+
+# 운영체제별 임시 파일
+.DS_Store
+Thumbs.db
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/

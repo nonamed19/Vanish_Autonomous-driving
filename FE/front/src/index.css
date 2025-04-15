@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Hyundai Sans";
+  src: url("./fonts/HyundaiSansTextOffice-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Hyundai Sans";
+  src: url("./fonts/HyundaiSansTextOffice-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Hyundai Sans";
+  src: url("./fonts/HyundaiSansTextOffice-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+:root {
+  font-family: "Hyundai Sans";
+  font-weight: 400;
+  line-height: 1.5;
+  color-scheme: light dark;
+  color: #fcfcfc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  overflow: hidden;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: fixed; /* 뷰포트 고정 */
+}
+
+body {
+  background: #fcfcfc;
+}
+
+/* 갤럭시 S24 대응 레이아웃 */
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.device-content {
+  width: 360px;
+  height: 780px;
+  background: #fcfcfc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 기존 스타일 유지 */
+h1 {
+  font-family: "Hyundai Sans";
+  font-weight: 700;
+}
+
+span {
+  font-family: "Hyundai Sans";
+  font-weight: 500;
+}
+
+p {
+  font-family: "Hyundai Sans";
+  font-weight: 400;
+  margin: 0;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #1c1e4e;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  height: 44px;
+  background-color: #012D5E;
+  color: #fcfcfc;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #012D5E80;
+}
+
+form button[type="submit"]:focus,
+form button[type="submit"]:focus-visible {
+  outline: 2px solid #0056b3;
+}
+
+.theme-button-container {
+  position: absolute;
+  top: 20%;
+  right: 80vw;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 100;
+}
+
+/* 미디어 쿼리 유지 */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #868686;
+    background-color: #ffffff;
+  }
+  button {
+    color: #012D5E;
+    background-color: #fcfcfc;
+  }
+  form button[type="submit"] {
+    background-color: #012D5E;
+    color: #fcfcfc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  form button[type="submit"]:hover {
+    background-color: #012D5E80;
+    color: #fcfcfc60;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #012D5E25;
+  }
+  form button[type="submit"]:active {
+    transform: scale(0.95);
+  }
+}
+
+/* iOS Safari 날짜 입력창 크기 고정 */
+input[type="date"] {
+  -webkit-appearance: none; /* 기본 스타일 제거 */
+  height: 17px; /* iOS 터치 영역 최소 크기 */
+  font-size: 14px;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  line-height: 1; /* 라인 높이 정규화 */
+  padding: 0; /* 내부 패딩 제거 */
+  display: block; /* 블록 요소로 변환 */
+  width: 100%; /* 너비 100% 채움 */
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none; /* 스피너 버튼 숨김 */
+}

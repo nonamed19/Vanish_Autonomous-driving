@@ -1,0 +1,6 @@
+<launch>
+    <!-- client start-->
+    <node pkg = "ssafy_1" type = "client.py" name="client" output="screen"/>
+    <!-- server start-->
+    <node pkg = "ssafy_1" type = "server.py" name="server" />
+</launch>

@@ -1,0 +1,2158 @@
+[
+    {
+        "idx": "A119BS010141",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5110880839754,
+            0.016859518418248728
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010142",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51147464664213,
+            0.017252059781200684
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010143",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5115650089969,
+            0.01717192474335617
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010144",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51153255596743,
+            0.016937979315773642
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010145",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51198421609365,
+            0.016897402635790967
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010146",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51244913826409,
+            0.01465406553142936
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010034"
+    },
+    {
+        "idx": "A119BS010147",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51157573977069,
+            0.016481599707707174
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010148",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5116289109304,
+            0.0172837936325868
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010149",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51235218679449,
+            0.014505424034078172
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010072"
+    },
+    {
+        "idx": "A119BS010150",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51185551699471,
+            0.013586023264828393
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010076"
+    },
+    {
+        "idx": "A119BS010151",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51230134815862,
+            0.012338063885940439
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010074"
+    },
+    {
+        "idx": "A119BS010153",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51280658160002,
+            0.01342513507613976
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010155",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51263086008008,
+            0.012369862852618273
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010073"
+    },
+    {
+        "idx": "A119BS010156",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51256488203455,
+            0.014538827097763992
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010157",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51221305290882,
+            0.011492828502777696
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010158",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51209985791365,
+            0.011359637431019982
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010023"
+    },
+    {
+        "idx": "A119BS010159",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51193342771623,
+            0.011277702737144901
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010024"
+    },
+    {
+        "idx": "A119BS010160",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51151291167749,
+            0.01117118634919351
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010161",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51191670566706,
+            0.010986367353579102
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010012"
+    },
+    {
+        "idx": "A119BS010162",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51202330736186,
+            0.011087160600204938
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010021"
+    },
+    {
+        "idx": "A119BS010163",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51229970690909,
+            0.010737645472229627
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010040"
+    },
+    {
+        "idx": "A119BS010164",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5122048067567,
+            0.011162294874325464
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010022"
+    },
+    {
+        "idx": "A119BS010165",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51158835812474,
+            0.01099189125791022
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010166",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51169885095166,
+            0.010893879316359533
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010005"
+    },
+    {
+        "idx": "A119BS010167",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51201927185143,
+            0.010750557078986102
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010007"
+    },
+    {
+        "idx": "A119BS010168",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51211736533882,
+            0.01065987762135243
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010047"
+    },
+    {
+        "idx": "A119BS010169",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51140710079153,
+            0.010914637539820488
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010170",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5115632091205,
+            0.010452568052300076
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010171",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51178296162256,
+            0.010651583892431319
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010001"
+    },
+    {
+        "idx": "A119BS010172",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51166016244868,
+            0.010521459480980268
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010173",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5120407441103,
+            0.010298126978452681
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010174",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51218371858549,
+            0.010462669692509781
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010046"
+    },
+    {
+        "idx": "A119BS010176",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51159652962838,
+            0.01031217286298209
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010184",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51103858669353,
+            0.009223292089208456
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010185",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51192857408104,
+            0.013292885628771834
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010075"
+    },
+    {
+        "idx": "A119BS010186",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51205797490907,
+            0.013460729751248464
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010063"
+    },
+    {
+        "idx": "A119BS010188",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51188707956136,
+            0.013586366592830475
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010076"
+    },
+    {
+        "idx": "A119BS010189",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5124192192702,
+            0.012491395526281998
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010039"
+    },
+    {
+        "idx": "A119BS010190",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51280653743379,
+            0.013390662947279443
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010191",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51250141005526,
+            0.014405465105419518
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010033"
+    },
+    {
+        "idx": "A119BS010201",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51147475341907,
+            0.017283167620266816
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010202",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51111806984815,
+            0.01685446826614485
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010203",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.5116106711888,
+            0.016864428095174765
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010204",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51153443190658,
+            0.017172816937640334
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010205",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51162944022943,
+            0.017253245003604777
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010206",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51226286295011,
+            0.01673150650055867
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010207",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51150020478947,
+            0.016554889462982912
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010208",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5124965327778,
+            0.014586700656059414
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010209",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51188011694818,
+            0.01670066039590359
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010210",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51191871962878,
+            0.014225616030335887
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010212",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51235423776667,
+            0.014537875838419164
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010213",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51242036469274,
+            0.014053337479009002
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010214",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51244610393607,
+            0.0140531666094503
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010216",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51231388001113,
+            0.013461537227597438
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010218",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51189474656906,
+            0.012690498406504989
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010219",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51185659709311,
+            0.013311852072191313
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010220",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51231101440096,
+            0.012369550737175633
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010221",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51251582613263,
+            0.012903601419819891
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010222",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51245305030747,
+            0.01290516065729811
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010223",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51248448748989,
+            0.012904611033948386
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010224",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51265200276644,
+            0.013424383604783131
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010225",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5128062404458,
+            0.013464035720879028
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010226",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51254504536286,
+            0.013679278657534572
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010227",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51251402925487,
+            0.013679602770553363
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010228",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51263065454629,
+            0.012338718885403107
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010073"
+    },
+    {
+        "idx": "A119BS010229",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51256522310409,
+            0.014507096883207416
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010230",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5121177944654,
+            0.011319528500145911
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010231",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51241308699692,
+            0.012214788761960553
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010232",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51153190523432,
+            0.011139799202127768
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010233",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51196671910837,
+            0.011295417326416323
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010234",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51199432437134,
+            0.011127224265142186
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010235",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5119460828335,
+            0.010946944069563216
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010236",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5121721962431,
+            0.011144048152002374
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010237",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51231292204797,
+            0.010696544312440666
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010238",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51173238422957,
+            0.010911981719374653
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010239",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51155773654911,
+            0.010972553243851744
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010240",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51215837052732,
+            0.010672965354799327
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010241",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51198609691127,
+            0.010732815457040102
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010242",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51158185243172,
+            0.010478499038202487
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010243",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51139357210207,
+            0.010955053166768447
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010244",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51169614221337,
+            0.0104926160217844
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010245",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51175401450158,
+            0.010691638542613645
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010246",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51217028844522,
+            0.010503815943006143
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010247",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51190583096127,
+            0.010261109510744139
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010248",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51304004713607,
+            0.012256495999489112
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010249",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51155819373331,
+            0.010335703878972214
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010256",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51072265592389,
+            0.009292313301522708
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010260",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51294700456673,
+            0.00943518199793572
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010261",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51317541004042,
+            0.011639219592284674
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010263",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51306713449034,
+            0.013546225322245632
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010264",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51310099062249,
+            0.01354637026500647
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010266",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51170796086926,
+            0.010370629059007434
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010267",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5118881506965,
+            0.013312438911459168
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010269",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51192875529854,
+            0.012670421852616876
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010271",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51203504951933,
+            0.013422000084298693
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010274",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51192750295516,
+            0.013566705092863578
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010278",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51188641345884,
+            0.014225516183261662
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010279",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.512285293157,
+            0.013387839272548014
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010051"
+    },
+    {
+        "idx": "A119BS010280",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51241598179115,
+            0.013191606812125504
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010281",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51245562975663,
+            0.012428657271560443
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010282",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51245411948639,
+            0.012729904895428289
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010283",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51251559622646,
+            0.012729960091033833
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010284",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51231363748661,
+            0.013495955211396763
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010285",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51209063183714,
+            0.013386969817242357
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010286",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51228488041212,
+            0.013422401562050908
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010051"
+    },
+    {
+        "idx": "A119BS010287",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5126513941759,
+            0.013390263229160246
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010288",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51267938079366,
+            0.01346378082246773
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010055"
+    },
+    {
+        "idx": "A119BS010289",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51280542451605,
+            0.013499977995111044
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010290",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51241220058778,
+            0.01370848995629947
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010035"
+    },
+    {
+        "idx": "A119BS010291",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51244764243741,
+            0.013708472587536154
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010035"
+    },
+    {
+        "idx": "A119BS010292",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51247834497123,
+            0.013708464148578849
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010035"
+    },
+    {
+        "idx": "A119BS010293",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51267927264587,
+            0.013498649795756592
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010055"
+    },
+    {
+        "idx": "A119BS010294",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51250798098881,
+            0.014201094846668705
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010295",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51245241220242,
+            0.014457199357002938
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010297",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51244852877531,
+            0.014211925970511241
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010298",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.5117118764553,
+            0.016672543108417752
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010299",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51302199562606,
+            0.015944933316920457
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010300",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51308440815119,
+            0.01657424518410912
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010301",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51305297991236,
+            0.016574181330063387
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010303",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51313914392215,
+            0.011639462534062062
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010304",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51304055880699,
+            0.016746451548044276
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010307",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51311976403214,
+            0.016008116356383648
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010308",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.5130560846891,
+            0.01594514151257078
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010309",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51308870447608,
+            0.01594527752074652
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010310",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51312050899372,
+            0.015945413510995786
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010311",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.5131515430368,
+            0.015945558503733644
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010312",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51306364089446,
+            0.014464472158227269
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010313",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51309635923194,
+            0.014464563004777492
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010314",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51312831605453,
+            0.014464635797354264
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010315",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51315969054204,
+            0.014464717597702485
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010316",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51313300119821,
+            0.01354650615389415
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010317",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51311197613009,
+            0.011892068402827534
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010318",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51316470716868,
+            0.013546642037129237
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010319",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51314001786366,
+            0.011892005726873205
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010320",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51317502971635,
+            0.011891943165164169
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010321",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51309729144046,
+            0.010157213878204749
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010322",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51317863928575,
+            0.010161345902598286
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010323",
+        "node_type": "9",
+        "junction": [],
+        "point": [
+            124.5130941980527,
+            0.010338395515422278
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010324",
+        "node_type": "9",
+        "junction": [],
+        "point": [
+            124.51313432549361,
+            0.010339018425983485
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010325",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51309597807872,
+            0.010536903486663845
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010326",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51313352532468,
+            0.010537327943935427
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010327",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51317865190161,
+            0.010537914860608372
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010328",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51313494617234,
+            0.010159270828575033
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010329",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51309189617423,
+            0.009635630998459092
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010330",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51305917764228,
+            0.00965037727985427
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010332",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.510886720266,
+            0.009422979035498125
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010337",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51301927970754,
+            0.016006391433391526
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010338",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51305676422777,
+            0.016007104793187794
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010339",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51308821933632,
+            0.016007511360387184
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010341",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51307479917409,
+            0.012256334237637778
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010342",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51310730249783,
+            0.012256289689955185
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010343",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51313897263536,
+            0.012256172972986722
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010344",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51317426221816,
+            0.012256083375369627
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010693",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51082692303686,
+            0.0091024208123517
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010694",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51205955840749,
+            0.010270744390377253
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010695",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51209572752181,
+            0.010155395971925222
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010696",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51192311250647,
+            0.010287960461785093
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010697",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51172397915941,
+            0.010399383076766702
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010698",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51214565721129,
+            0.011304457539668897
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010699",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51224048562173,
+            0.011478253606524907
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010700",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51225534874114,
+            0.011470361877092421
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010701",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51244914702745,
+            0.012214212128399687
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010026"
+    },
+    {
+        "idx": "A119BS010702",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51248065588719,
+            0.012213301700646424
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010025"
+    },
+    {
+        "idx": "A119BS010703",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51251220058319,
+            0.012212463428544516
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010025"
+    },
+    {
+        "idx": "A119BS010704",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51248671752705,
+            0.012428711920768686
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010705",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51251759927207,
+            0.012426962688136414
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010706",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51254697068853,
+            0.012729978680603724
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010707",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51245359816701,
+            0.012827485674308725
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010709",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51251580955474,
+            0.01282704482465034
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010710",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51254673607014,
+            0.012826837925730663
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010711",
+        "node_type": "7",
+        "junction": [],
+        "point": [
+            124.51254694080124,
+            0.012902600821012506
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010712",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51245120913663,
+            0.013163034023326187
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010027"
+    },
+    {
+        "idx": "A119BS010713",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51248267318265,
+            0.013163242040484921
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010028"
+    },
+    {
+        "idx": "A119BS010714",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51251467477114,
+            0.013163432028625674
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010028"
+    },
+    {
+        "idx": "A119BS010715",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51254591484366,
+            0.013163694158089058
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": "C119BS010029"
+    },
+    {
+        "idx": "A119BS010716",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5120148382644,
+            0.0168849024814795
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010717",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51187709704031,
+            0.01673245365327009
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010718",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51178120879483,
+            0.01673350670806405
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010727",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51123592012048,
+            0.016695143737013626
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010728",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51131962409433,
+            0.016692430832359228
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010729",
+        "node_type": "10",
+        "junction": [],
+        "point": [
+            124.51140536890632,
+            0.01676979200891715
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010730",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51124463649785,
+            0.016727090566373472
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010750",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51139831159693,
+            0.016665112949530717
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010751",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51162675042359,
+            0.016566121481273448
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010752",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.5116995911139,
+            0.016784500406287445
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010753",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51149512696901,
+            0.016863866205887323
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010754",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51202849888023,
+            0.013509605253593243
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010755",
+        "node_type": "1",
+        "junction": [],
+        "point": [
+            124.51197693430167,
+            0.013320016824842046
+        ],
+        "on_stop_line": true,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000000",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.51308089742295,
+            0.01674541275389687
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000001",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.51288526554693,
+            0.013586063403346695
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000002",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.51291668678604,
+            0.01358571956415073
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000006",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.5129182049509,
+            0.013310632290896436
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000005",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.51288660326466,
+            0.013310977660580703
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "ND000003",
+        "node_type": null,
+        "junction": [],
+        "point": [
+            124.51318074036026,
+            0.010339518566958842
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010276",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51195892990327,
+            0.01363386401828449
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    },
+    {
+        "idx": "A119BS010277",
+        "node_type": "99",
+        "junction": [],
+        "point": [
+            124.51192695523329,
+            0.013632763052148885
+        ],
+        "on_stop_line": false,
+        "traffic_light_id": null
+    }
+]

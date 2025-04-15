@@ -1,0 +1,20 @@
+<launch>
+    <node pkg="vanish" type="mgeo_pub.py" name="mgeo_pub"  />
+    <node pkg="vanish" type="gpsimu_parser.py" name="gpsimu_parser" />
+    <node pkg="vanish" type="global_path_pub.py" name="global_path_pub" />
+    <node pkg="vanish" type="local_path_pub.py" name="local_path_pub" />
+
+    <node pkg="vanish" type="way_cal.py" name="way_cal" />
+    <node pkg="vanish" type="arrival_detector.py" name="arrialdetector"  />
+    <node pkg="vanish" type="traffic_distance.py" name="trafficinfo"  />
+
+    <node pkg="vanish" type="acc.py" name="ACC"  />
+    <node pkg="vanish" type="tf_pub.py" name="tf"  />
+
+    <node pkg="vanish" type="gps_to_server.py" name="gps_to_server" />
+    <node pkg="vanish" type="status_to_server.py" name="status_to_server" />
+    <node pkg="vanish" type="network.py" name="network"  output = "screen" />
+
+    <node pkg="vanish" type="parking_executor.py" name="parking" output = "screen" />
+
+</launch>
