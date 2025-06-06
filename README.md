@@ -118,11 +118,11 @@ $ roslaunch vanish point_driving.launch
 
 |                                  모바일 어플리케이션                                  |                               인포테인먼트                               |
 | :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| <img src="./readimg/캡처_2025_04_11_11_37_34_499.png" height="400px" title="baisc_features"/> | <img src="./readimg/캡처_2025_04_11_11_00_35_34.png" height="400px" title="book_borrow"/> |
+| <img src="./readimg/캡처_2025_04_11_11_37_34_499.png" height="300px" title="mobile_app"/> | <img src="./readimg/캡처_2025_04_11_11_00_35_34.png" height="300px" title="infortainment"/> |
 |                                  차량 자율 배회                                  |                               차량 자동 주차                               |
-|  <img src="./readimg/캡처_2025_04_11_11_41_31_550.png" height="400px" title="book_return"/>   | <img src="./readimg/캡처_2025_04_11_11_42_49_298.png" height="400px" title="book_return"/> |
+|  <img src="./readimg/캡처_2025_04_11_11_41_31_550.png" height="300px" title="auto_drive"/>   | <img src="./readimg/캡처_2025_04_11_11_42_49_298.png" height="300px" title="auto_parking"/> |
 |                                  차량 호출 기능                                  |                               자동 결제 기능                               |
-|  <img src="./readimg/캡처_2025_04_11_11_43_06_575.png" height="400px" title="book_return"/>   | <img src="./readimg/캡처_2025_04_11_11_43_17_648.png" height="400px" title="book_return"/> |
+|  <img src="./readimg/캡처_2025_04_11_11_43_06_575.png" height="300px" title="auto_calling"/>   | <img src="./readimg/캡처_2025_04_11_11_43_17_648.png" height="300px" title="auto_payment"/> |
 
 ### ROS 구성 노드
 
