@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Crosswalk Visualization</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4.js"></script>
+    <style>
+        body { margin: 0; overflow: hidden; }
+        #map { width: 100vw; height: 100vh; }
+        #file-input {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="file-input">
+        <input type="file" id="crosswalkFile" accept=".json">
+        <button onclick="loadCrosswalkFile()">Load Crosswalk File</button>
+        <button onclick="saveGeoJSON()">Save GeoJSON</button>
+    </div>
+    <div id="map"></div>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2hhcm14MWFtIiwiYSI6ImNtNjVzeXExYTBzNjMycnF2ZWw5eG4yZGgifQ.yWwzK20xQIi0JPRXoUyW-Q';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            center: [126.56354444461036, 37.52847496123938],
+            zoom: 20
+        });
+
+        let crosswalkFeatures = [];
+
+        function loadCrosswalkFile() {
+            const crosswalkFile = document.getElementById('crosswalkFile').files[0];
+            if (!crosswalkFile) {
+                alert('Please select a crosswalk JSON file.');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const data = JSON.parse(event.target.result);
+                parseCrosswalkData(data);
+            };
+            reader.readAsText(crosswalkFile);
+        }
+
+        function parseCrosswalkData(data) {
+            crosswalkFeatures = data.map(crosswalk => ({
+                type: 'Feature',
+                geometry: {
+                    type: 'Polygon',
+                    coordinates: [crosswalk.points.map(point => [point[0], point[1]])]
+                },
+                properties: {
+                    idx: crosswalk.idx,
+                    sign_type: crosswalk.sign_type,
+                    ref_crosswalk_id: crosswalk.ref_crosswalk_id
+                }
+            }));
+
+            updateMapSource('crosswalks', crosswalkFeatures, 'fill', '#00FF00');
+        }
+
+        function updateMapSource(sourceId, features, layerType, color) {
+            if (map.getSource(sourceId)) {
+                map.getSource(sourceId).setData({
+                    type: 'FeatureCollection',
+                    features: features
+                });
+            } else {
+                map.addSource(sourceId, {
+                    type: 'geojson',
+                    data: {
+                        type: 'FeatureCollection',
+                        features: features
+                    }
+                });
+
+                map.addLayer({
+                    id: `${sourceId}-layer`,
+                    type: layerType,
+                    source: sourceId,
+                    paint: {
+                        'fill-color': color,
+                        'fill-opacity': 0.5
+                    }
+                });
+
+                map.addLayer({
+                    id: `${sourceId}-outline`,
+                    type: 'line',
+                    source: sourceId,
+                    paint: {
+                        'line-color': '#000',
+                        'line-width': 2
+                    }
+                });
+            }
+        }
+
+        function saveGeoJSON() {
+            if (crosswalkFeatures.length === 0) {
+                alert('No crosswalk data available to save.');
+                return;
+            }
+
+            const geojson = {
+                type: 'FeatureCollection',
+                features: crosswalkFeatures
+            };
+
+            const blob = new Blob([JSON.stringify(geojson, null, 2)], { type: 'application/json' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'crosswalk_data.geojson';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
