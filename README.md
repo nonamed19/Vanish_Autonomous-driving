@@ -55,10 +55,12 @@ SSAFY 특화 프로젝트 : 자율주행 기반 자동 주차 및 호출 서비�
 #### Backend
 
 ```bash
-$ cd backend
+$ cd backend/member-service # 실행할 서비스를 선택
 $ ./gradlew build
-$ docker-compose up
 ```
+
+각 백엔드 서비스는 독립 Gradle 프로젝트입니다. 서비스별 실행 순서와 디렉터리 구조는
+[`PROJECT_STRUCTURE.md`](./PROJECT_STRUCTURE.md)를 참고하세요.
 
 #### Frontend
 
